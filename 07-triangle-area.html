@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area</title>
+    <style>
+        body{
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(360,768,365)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%234FE'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='627' height='522.5' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .jumbotron{
+            position: relative;
+            overflow: hidden;
+        }
+        video{
+            position: absolute;
+            z-index: 1;
+            /* left: 0; */
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 70%;
+        }
+        .header-text{
+            z-index: 2;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="jumbotron p-0 pt-5 pb-5 bg-dark text-white rounded">
+            <video src="https://cdn.pixabay.com/video/2020/03/03/33194-396036988_large.mp4" autoplay loop muted></video>
+            <div class="header-text ms-5">
+                <h1>Jumbotron Example</h1>
+                <p>Lorem ipsum...</p>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(141, 253, 255);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">PONGSIT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="card mx-auto mt-5 mb-5" style="width: 40rem;">
+            <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+            <div class="card-body m-au">
+              <p class="card-text">
+                <h5 class="card-title">Formula for finding the area of ​​a triangle.</h5>
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <label class="form-label">Base</label>
+                        <input type="number" class="form-control" id="base" name="base">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Height</label>
+                        <input type="number" class="form-control" id="height" name="height">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-25" onclick="click_submit()">Submit</button>
+                    <button type="reset" class="btn btn-danger w-25">Reset</button>
+                </div>
+              </p>
+              <p id="output1"></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+    <script>
+        function click_submit() {
+            document.getElementById('output1').innerHTML = 1/2*document.getElementById('base').value*document.getElementById('height').value
+        }
+    </script>
+</body>
+</html>
